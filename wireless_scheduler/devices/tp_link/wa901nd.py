@@ -94,7 +94,7 @@ class DeviceWA901ND(AbstractHttpDevice):
 
         if self.is_bad_login(response):
             raise LoginFailed(
-                "Login requests failed, make sure the user/password is correct"
+                "Login request failed, make sure the user/password is correct"
             )
 
         self.session_id = self.parse_session_id(response.text)
